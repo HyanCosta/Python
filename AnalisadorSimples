@@ -1,0 +1,24 @@
+x= int(input('Quantas pessoas você quer analisar? '))
+somaidade = 0
+media = 0
+maioridadehomem= 0
+nomehomem= ''
+totmulher18= 0
+for c in range (1,x):
+    print(f'---{c}* PESSOA---')
+    nome=str(input('Nome: ')).upper()
+    idade=int(input('Idade:'))
+    sexo=str(input('Sexo [M/F]:')).upper()
+    somaidade+=idade
+    if c==1 and sexo in 'Mm':
+        maioridadehomem=idade
+        nomehomem=nome
+    if sexo in 'Mm' and idade > maioridadehomem:
+        maioridadehomem=idade
+        nomehomem=nome
+    if sexo in 'Ff' and idade < 18:
+        totmulher18+= 1
+media= somaidade/x-1
+print(f'A média de idade do grupo é {media}')
+print(f'O homem mais velho tem {maioridadehomem} anos, e se chama {nomehomem}.')
+print(f'Ao todo são {totmulher18} mulheres com menos de 18 anos')
