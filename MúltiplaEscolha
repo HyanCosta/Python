@@ -1,0 +1,104 @@
+from itertools import repeat
+from time import sleep
+x=int(input('Digite o primeiro valor: '))
+y=int(input('Digite o segundo valor: '))
+sleep(1)
+print('1-somar')
+print('2-multiplicar')
+print('3-maior')
+print('4-novos numeros')
+print('5-sair do progama')
+sleep(1)
+z=int(input('qual sua escolha? '))
+if z == 1:
+    print(x+y)
+elif z==2:
+    print(x*y)
+elif z==3:
+    if x>y:
+        print(x)
+    else:
+        print(y)
+elif z==4:
+    x = int(input('Digite o primeiro valor: '))
+    y = int(input('Digite o segundo valor: '))
+    print('1-somar')
+    print('2-multiplicar')
+    print('3-maior')
+    print('4-novos numeros')
+    print('5-sair do progama')
+    z = int(input('qual sua escolha? '))
+    if z == 1:
+        print(x + y)
+    elif z == 2:
+        print(x * y)
+    elif z == 3:
+        if x > y:
+            print(x)
+        else:
+            print(y)
+    elif z == 4:
+        x = int(input('Digite o primeiro valor: '))
+        y = int(input('Digite o segundo valor: '))
+        print('1-somar')
+        print('2-multiplicar')
+        print('3-maior')
+        print('4-novos numeros')
+        print('5-sair do progama')
+        z = int(input('qual sua escolha? '))
+    elif z == 5:
+        print('Programa encerrado')
+elif z==5:
+    print('Programa encerrado')
+while z!= 5:
+    x = int(input('Digite o primeiro valor: '))
+    y = int(input('Digite o segundo valor: '))
+    sleep(1)
+    print('1-somar')
+    print('2-multiplicar')
+    print('3-maior')
+    print('4-novos numeros')
+    print('5-sair do progama')
+    sleep(1)
+    z = int(input('qual sua escolha? '))
+    if z == 1:
+        print(x + y)
+    elif z == 2:
+        print(x * y)
+    elif z == 3:
+        if x > y:
+            print(x)
+        else:
+            print(y)
+    elif z == 4:
+        x = int(input('Digite o primeiro valor: '))
+        y = int(input('Digite o segundo valor: '))
+        print('1-somar')
+        print('2-multiplicar')
+        print('3-maior')
+        print('4-novos numeros')
+        print('5-sair do progama')
+        z = int(input('qual sua escolha? '))
+        if z == 1:
+            print(x + y)
+        elif z == 2:
+            print(x * y)
+        elif z == 3:
+            if x > y:
+                print(x)
+            else:
+                print(y)
+        elif z == 4:
+            x = int(input('Digite o primeiro valor: '))
+            y = int(input('Digite o segundo valor: '))
+            print('1-somar')
+            print('2-multiplicar')
+            print('3-maior')
+            print('4-novos numeros')
+            print('5-sair do progama')
+            z = int(input('qual sua escolha? '))
+        elif z == 5:
+            print('Programa encerrado')
+    elif z == 5:
+        print('Programa encerrado')
+
