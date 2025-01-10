@@ -1,0 +1,26 @@
+from random import randint
+v=0
+while True:
+    player=int(input('Digite um valor: '))
+    comp=randint(0,10)
+    total= comp+player
+    tip=' '
+    while tip not in 'PI':
+        tip= str(input('Par ou Ímpar?[P/I] ')).upper().strip()[0]
+    print(f'Você jogou {player} e o Computador jogou {comp}, TOTAL = {total}')
+    if tip =='P':
+        if total % 2 == 0:
+            print('Você ganhou da máquina!')
+            v+=1
+        else:
+            print('Você perdeu!')
+            break
+    elif tip =='I':
+        if total%2==1:
+            print('Você ganhou da máquina!')
+            v+=1
+        else:
+            print('Você perdeu!')
+            break
+    print('Vamos jogar mais uma vez...')
+print(f'JOGO ENCERRADO! Você ganhou {v} vezes! ')
