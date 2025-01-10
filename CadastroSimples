@@ -1,0 +1,22 @@
+m20=h=p18=0
+while True:
+    print('_'*15)
+    print('Cadastre uma pessoa')
+    print('-'*15)
+    i=int(input('Qual a idade da pessoa? '))
+    if i >=18:
+        p18 += 1
+    sexo=str(input('Qual o sexo da pessoa? [M/F]')).upper().strip()[0]
+    if sexo in 'M':
+        h+=1
+    elif sexo in 'F' and i >=20:
+        m20+=1
+
+    cont=str(input('Quer continuar?[S/N] ')).upper().split()[0]
+    if cont in 'N':
+        print(f'O total de pessoas com +18y foram: {p18}')
+        print(f'O total de homens cadastrados foi: {h}')
+        print(f'O total de mulheres com +20y foram: {m20}')
+        break
+        
+print('PROGRAMA ENCERRADO')
