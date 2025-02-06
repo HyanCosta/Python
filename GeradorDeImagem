@@ -1,0 +1,30 @@
+# Execute os códigos no Google Collab, alguns projetos do Hugging Face usam muita mémoria do pc #
+
+# primeiro código #
+!pip install diffusers transformers accelerate scipy safetensors xformers
+!pip install --upgrade torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# segundo código #
+import os
+
+os.environ['HF_TOKEN'] = '(seu token do hugging face)'
+
+import torch
+from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
+
+model_id = "stabilityai/stable-diffusion-2-1"
+
+# Use the DPMSolverMultistepScheduler (DPM-Solver++) scheduler here instead
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
+pipe = pipe.to("cuda")
+
+prompt = "image of cristo redentor"
+image = pipe(prompt).images[0]
+
+# terceiro código ( mostra a imagem gerada ) #
+import matplotlib.pyplot as plt
+
+plt.imshow(image)
+
+plt.show()
