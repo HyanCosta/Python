@@ -1,0 +1,20 @@
+#Funcão que acha o maior número#
+
+from time import sleep
+
+
+def maior(* num):
+    cont = maior = 0
+    print('\nanalisando valores...')
+    for valor in num:
+        print(valor,end=' ',flush=True)
+        sleep(0.3)
+        if cont==0:
+            maior=valor
+        else:
+            if valor > maior:
+                maior = valor
+        cont+=1
+    print(f'...Foram informados {cont} valores, e o maior foi {maior}')
+
+maior(1,8,9,5)
