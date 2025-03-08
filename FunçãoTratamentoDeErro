@@ -1,0 +1,28 @@
+#função#
+
+def inteiro():
+
+    while True:
+        try:
+            valorinteiro=int(input('Digite um valor inteiro: '))
+
+        except ValueError:
+            print('O valor foi digitado incorretamente, tente novamente')
+        else:
+            break
+
+    while True:
+        try:
+            valoreal = float(input('Digite um valor real: '))
+        except ValueError:
+            print('O valor foi digitado incorretamente, tente novamente')
+        else:
+            break
+
+    print(f'o valor inteiro foi {valorinteiro} e o valor real foi {valoreal}')
+
+#programa#
+
+import módulos
+
+módulos.inteiro()
